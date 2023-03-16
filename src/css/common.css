@@ -199,3 +199,129 @@ img {
     background-position: 0% 50%;
   }
 }
+
+/* стилі длґ 02-timer */
+
+.body {
+  font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
+  user-select: none;
+  color: #888;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+  background: rgb(150, 150, 150);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(150, 150, 150, 1) 0%, rgba(89, 89, 89, 1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(150, 150, 150, 1)), color-stop(100%, rgba(89, 89, 89, 1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(150, 150, 150, 1) 0%, rgba(89, 89, 89, 1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(150, 150, 150, 1) 0%, rgba(89, 89, 89, 1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(150, 150, 150, 1) 0%, rgba(89, 89, 89, 1) 100%);
+  background: radial-gradient(ellipse at center, rgba(150, 150, 150, 1) 0%, rgba(89, 89, 89, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#969696', endColorstr='#595959', GradientType=1);
+}
+
+.input__date {
+  display: inline-block;
+  width: 300px;
+  height: 50px;
+  padding: 20px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+}
+
+.input__date:disabled {
+  background-color: initial;
+}
+
+.start-button {  
+  text-decoration: none;
+  color: #272838;
+  border: 3px solid #ffffff;
+  padding: 10px 35px;
+  font-size: 20px;
+  margin-left: 40px;
+  position: relative;
+  transition: all .5s
+}
+
+.start-button:hover {
+  background-color: #fff;
+  border-radius:4px;
+}
+
+.start-button::before,
+.start-button::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-style: solid;
+  border-color: #fff;
+  transition: all .5s
+}
+
+.start-button::before {
+  top: -1rem;
+  left: -1rem;
+  border-width: 2px 0 0 2px;
+}
+
+.start-button::after {
+  bottom: -1rem;
+  right: -1rem;
+  border-width: 0px 2px 2px 0px;
+}
+
+.start-button:hover::before,
+.start-button:hover::after {
+  width: calc(100% + 35px);
+  height: calc(100% + 35px);
+  border-color: #fff;
+}
+
+.start-button:disabled {
+  background-color: inherit;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.start-button:disabled:hover::before,
+.start-button:disabled:hover::after {
+  width: 2rem;
+  height: 2rem;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  height: 200px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.value {
+  font-size: 50px;
+    line-height: 1;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.label {
+  font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+}
