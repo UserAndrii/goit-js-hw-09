@@ -6,23 +6,57 @@
     <title>Promise generator</title>
     <link rel="stylesheet" href="css/common.css" />
   </head>
-  <body>
-    <p><a href="index.html">Go back</a></p>
+  <body class="body-promises">
+    <p><a class="btn btn-reverse btn-arrow btn-promises" href="index.html">
+        <span class="span"
+          >Go back<svg
+            class="svg"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 36.1 25.8"
+            enable-background="new 0 0 36.1 25.8"
+            xml:space="preserve"
+          >
+            <g>
+              <line
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="3"
+                stroke-miterlimit="10"
+                x1="0"
+                y1="12.9"
+                x2="34"
+                y2="12.9"
+              ></line>
+              <polyline
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="3"
+                stroke-miterlimit="10"
+                points="22.2,1.1 34,12.9 22.2,24.7   "
+              ></polyline>
+            </g></svg
+        ></span>
+      </a></p>
 
     <form class="form">
-      <label>
+      <label class="form__label">
         First delay (ms)
-        <input type="number" name="delay" required />
+        <input class="form__input" type="number" name="delay" required />
       </label>
-      <label>
+      <label class="form__label">
         Delay step (ms)
-        <input type="number" name="step" required />
+        <input class="form__input" type="number" name="step" required />
       </label>
-      <label>
+      <label class="form__label">
         Amount
-        <input type="number" name="amount" required />
+        <input class="form__input form__input--margin" type="number" name="amount" required />
       </label>
-      <button type="submit">Create promises</button>
+      <button class="form__btn" type="submit">Create promises</button>
     </form>
 
     <script src="js/03-promises.js" type="module"></script>

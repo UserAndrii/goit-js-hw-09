@@ -38,7 +38,7 @@ function startBtnActivation() {
   const selectedDate = new Date(date).getTime();
   if (selectedDate < currentDate) {
     Notiflix.Notify.failure('Please choose a date in the future', {
-      timeout: 3000,
+      timeout: 4000,
     });
     return;
   }
@@ -58,7 +58,7 @@ function onStartTheTimer() {
     if (timeDifference < 0) {
       clearInterval(timerId);
       Notiflix.Notify.success('Did you really make it to the very end? 😉', {
-        timeout: 3000,
+        timeout: 4000,
       });
       refs.input.disabled = false;
       refs.cleanBtn.disabled = true;

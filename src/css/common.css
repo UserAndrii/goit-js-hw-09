@@ -17,17 +17,72 @@ img {
   max-width: 100%;
 }
 
+p {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.index-body {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(https://besthqwallpapers.com/Uploads/6-4-2020/127480/javascript-black-logo-programming-language-grid-metal-background-javascript-artwork.jpg) no-repeat center;
+}
+
+.wrapper {
+  padding-top: 50px;
+  padding-left: 30px;
+  height: 100vh;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 20px
+}
+
+.wrapper .row:hover .card {
+  background: #5edfff;
+  transform: rotateY(30deg);
+}
+
+.card {
+  height: 60px;
+  width: 175px;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  transition: all ease 0.5s;
+  background: #b2fcff;
+}
+
+.card-wrap {
+  display: inline-block;
+  perspective: 2000px;
+}
+
+.card-wrap:hover .card {
+  background: #fff !important;
+  box-shadow: 1px 1px 25px 10px #dfe0e266;
+  color: white;
+  transform: rotateY(0deg) !important;
+}
+
+.card-wrap:hover~.card-wrap .card {
+  background: #5edfff;
+  transform: rotateY(-30deg);
+}
+
 /* Стилі для сиску та повернення до головного меню */
 
 .link {
+  display: inline-block;
+  padding-top: 17px;
   text-decoration: none;
   color: #333;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.5;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.2s ease;
 }
 
 .item:hover {
@@ -35,30 +90,20 @@ img {
 }
 
  .btn {
-  display: block;
-   background: #1d1d1d;
-   color: white;
-   border: none;
-   font-size: 10px;
-   font-size: 1rem;
-   background-color: #1d1d1d;
-   color: white;
-   letter-spacing: 1.5px;
-   text-transform: uppercase;
-   padding: 14px 21px;
-   padding: 1.4rem 2.1rem;
-   border-radius: 10px;
-   border: 2px solid #1d1d1d;
-   transition: color 0.1s cubic-bezier(0.16, 0.08, 0.355, 1), background 0.1s cubic-bezier(0.16, 0.08, 0.355, 1);
-   display: inline-block;
-   cursor: pointer;
-   padding: 10px;
-   min-width: 150px;
-   outline: none;
-   vertical-align: middle;
-   text-align: center;
-   position: relative;
-   overflow: hidden;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  background: #1d1d1d;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: 2px solid #1d1d1d;
+  transition: color 0.1s cubic-bezier(0.16, 0.08, 0.355, 1), background 0.1s cubic-bezier(0.16, 0.08, 0.355, 1);
+  cursor: pointer;
+  padding: 10px;
+  min-width: 150px;
 }
 
 .btn:hover {
@@ -77,7 +122,8 @@ img {
   transition: background-color 300ms ease-out;
 }
 
-.span {display: inline-block;
+.span {
+  display: inline-block;
   position: relative;
   transition: all 300ms ease-out;
   will-change: transform;
@@ -221,7 +267,7 @@ img {
   display: inline-block;
   width: 300px;
   height: 50px;
-  padding: 20px;
+  padding: 5px 20px;
   font-family: inherit;
   font-size: 20px;
   font-weight: 500;
@@ -230,6 +276,10 @@ img {
   background-color: #fff;
   border: 1px solid #bdbdbd;
   border-radius: 10px;
+}
+
+.input__date:focus {
+  outline: transparent;
 }
 
 .input__date:disabled {
@@ -325,3 +375,97 @@ img {
     text-transform: uppercase;
     color: #fff;
 }
+
+/* styles for 03-promises */
+
+.body-promises {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(https://images.pexels.com/photos/2166927/pexels-photo-2166927.jpeg?cs=srgb&dl=animal-aquarium-aquatic-2166927.jpg&fm=jpg) no-repeat center;
+}
+
+.btn-promises {
+  border: 1px solid #fff;
+  border-radius: 0px;
+  background-color: inherit;
+}
+
+.btn-promises:hover {
+  border: 1px solid #fff;
+  border-radius: 0px;
+  background-color: inherit;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.form__label {
+  text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+}
+
+.form__input {
+  padding-left: 20px;
+  width: 350px;
+  height: 40px;
+  
+  /* border-radius: 10px; */
+  border: 3px solid rgb(146, 148, 248);
+  transition: all .5s;
+
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  margin-left: 50px;
+}
+
+.form__input--margin {
+ margin-left: 128px;
+}
+
+.form__input:focus {
+  border: 1px solid #bdbdbd;
+  outline: transparent;
+}
+
+.form__btn {
+  color: #fff;
+  background-color: inherit;
+  font-size: 20px;
+  height: 40px;
+  width: 200px;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow: hidden;
+}
+
+.form__btn:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.form__btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(146, 148, 248, 0.4),
+      transparent);
+  transition: all 650ms;
+}
+
+.form__btn:hover:before {
+  left: 100%;
+}
+
