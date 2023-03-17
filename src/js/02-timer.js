@@ -40,6 +40,8 @@ function startBtnActivation() {
     Notiflix.Notify.failure('Please choose a date in the future', {
       timeout: 4000,
     });
+    refs.startBtn.disabled = true;
+    date = null;
     return;
   }
   refs.startBtn.disabled = false;
@@ -79,6 +81,9 @@ function updateClockface(obj) {
 
 function resetTheTimer() {
   clearInterval(timerId);
+  Notiflix.Notify.warning('You have cleared the timer!', {
+        timeout: 4000,
+      });
   refs.input.disabled = false;
 
   refs.days.textContent = '00';
